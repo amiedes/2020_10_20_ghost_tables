@@ -7,13 +7,10 @@ require 'cgi'
 
 BUILDER_HOST = 'http://carto.localhost.lan:3000'
 SQL_API_HOST = 'http://carto.localhost.lan:8080'
-API_KEY = '159ea4251d8b42e8f00daa898c152b446051cf9f'
+API_KEY = 'ad9a4ab5a73d3046472ac00c134df27c5f448b6c'
 
 DATASET_RAW_URL = 'https://www.dropbox.com/s/qexlwjnvznpiw3a/dataset_ciudades.csv?dl=1'
 TABLE_BASE_NAME = 'dataset_ciudades'
-
-# DATASET_RAW_URL = 'https://www.dropbox.com/s/hisi99qk951rhvj/carto_rmr_ooh_proposal_86.csv?dl=1'
-# TABLE_BASE_NAME = 'carto_rmr_ooh_proposal_86'
 
 OLD_TABLE_NAME = TABLE_BASE_NAME
 NEW_TABLE_NAME = "#{TABLE_BASE_NAME}_1"
@@ -77,6 +74,27 @@ def rename_table(current_name, new_name)
   log JSON.pretty_generate(response)
 end
 
+def rename_tables_using_transaction
+  response = sql_api_get(%(
+  BEGIN;
+  ALTER TABLE #{OLD_TABLE_NAME} RENAME TO #{TMP_TABLE_NAME};
+  ALTER TABLE #{NEW_TABLE_NAME} RENAME TO #{OLD_TABLE_NAME};
+  COMMIT;
+  ))
+end
+
+def enqueue_batch_query(sql_query)
+  uri = URI("#{SQL_API_HOST}/api/v2/sql/job?api_key=#{API_KEY}")
+  response = Net::HTTP.post(
+    uri,
+    { query: sql_query }.to_json,
+    'Content-Type' => 'application/json'
+  )
+  response_hash = JSON.parse(response.body)
+  log "Created batch query: #{response_hash}"
+  response_hash
+end
+
 puts 'INITIAL STATE'
 puts '-------------'
 
@@ -100,6 +118,14 @@ count_table_rows(NEW_TABLE_NAME)
 
 puts "\n\nSTART RENAMING"
 puts '-------------'
+
+# enqueue_batch_query(%(
+#   BEGIN;
+#   ALTER TABLE #{OLD_TABLE_NAME} RENAME TO #{TMP_TABLE_NAME};
+#   ALTER TABLE #{NEW_TABLE_NAME} RENAME TO #{OLD_TABLE_NAME};
+#   DROP TABLE #{TMP_TABLE_NAME};
+#   COMMIT;
+# ))
 
 rename_table(OLD_TABLE_NAME, TMP_TABLE_NAME)
 
