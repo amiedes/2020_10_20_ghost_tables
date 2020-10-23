@@ -119,6 +119,9 @@ count_table_rows(NEW_TABLE_NAME)
 puts "\n\nSTART RENAMING"
 puts '-------------'
 
+puts "Please clear the log"
+sleep 10
+
 # enqueue_batch_query(%(
 #   BEGIN;
 #   ALTER TABLE #{OLD_TABLE_NAME} RENAME TO #{TMP_TABLE_NAME};
