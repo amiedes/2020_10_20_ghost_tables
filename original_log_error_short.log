@@ -1,0 +1,561 @@
+### DOC: Request to rename dataset_ciudades to dataset_ciudades_tmp
+
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.868Z","request_id":"ca9f5fd2-a801-4eec-a47c-db4b94b25d43","cdb-user":"carto","client_request":{"method":"GET","url":"/api/v2/sql?q=ALTER%20TABLE%20dataset_ciudades%20RENAME%20TO%20dataset_ciudades_tmp;&api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"accept-encoding":"gzip;q=1.0,deflate;q=0.6,identity;q=0.3","accept":"*/*","user-agent":"Ruby","host":"carto.localhost.lan:8080"},"remoteAddress":"172.18.0.1","remotePort":40846},"event_message":"Incoming request"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.874Z","request_id":"ca9f5fd2-a801-4eec-a47c-db4b94b25d43","cdb-user":"carto","sql":"ALTER TABLE dataset_ciudades RENAME TO dataset_ciudades_tmp;","event_message":"Input query"}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40296,"fd":19},"msg":"client:connected","time":"2020-10-23T09:18:08.957Z","v":0}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40296,"fd":19},"command":["DBSCH","cartodb_dev_user_1c233e0a-8198-412e-8e6a-b97d6ca37372_db","carto","ALTER TABLE"],"stats":{"time":1},"results":[{"type":"ghost_tables","stats":{"time":1}}],"msg":"command:ok","time":"2020-10-23T09:18:08.958Z","v":0}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.960Z","request_id":"ca9f5fd2-a801-4eec-a47c-db4b94b25d43","cdb-user":"carto","server_response":{"statusCode":200,"headers":{"access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","access-control-expose-headers":"Carto-Rate-Limit-Limit, Carto-Rate-Limit-Remaining, Carto-Rate-Limit-Reset, Retry-After","x-served-by-host":"0e8f77e96710","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","vary":"Authorization","cache-control":"no-cache,max-age=0,must-revalidate,public","last-modified":"Fri, 23 Oct 2020 09:18:08 GMT","content-disposition":"inline; filename=cartodb-query.json; modification-date=\"Fri, 23 Oct 2020 09:18:08 GMT\";","content-type":"application/json; charset=utf-8","x-served-by-db-host":"postgresql"}},"status":200,"event_message":"Response sent"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.960Z","request_id":"ca9f5fd2-a801-4eec-a47c-db4b94b25d43","cdb-user":"carto","stats":{"authorization":1,"getConnectionParams":3,"getUserTimeoutLimits":1,"queryExplain":4,"eventedQuery":9,"gotRows":72,"response":91,"total":90},"duration":0.091,"duration_ms":91,"event_message":"Request profiling stats"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.960Z","request_id":"ca9f5fd2-a801-4eec-a47c-db4b94b25d43","cdb-user":"carto","tags":["query"],"event_message":"Request tagged"}
+
+### DOC: Request to list tables
+
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.966Z","request_id":"3b655c19-2396-4640-804f-85e25cc81b69","cdb-user":"carto","client_request":{"method":"GET","url":"/api/v2/sql?q=%20%20SELECT%20table_name%20%20FROM%20information_schema.tables%20%20WHERE%20table_schema%20=%20%27public%27%20AND%20table_type%20=%20%27BASE%20TABLE%27%20%20ORDER%20BY%20table_name;%20%20&api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"accept-encoding":"gzip;q=1.0,deflate;q=0.6,identity;q=0.3","accept":"*/*","user-agent":"Ruby","host":"carto.localhost.lan:8080"},"remoteAddress":"172.18.0.1","remotePort":40854},"event_message":"Incoming request"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.969Z","request_id":"3b655c19-2396-4640-804f-85e25cc81b69","cdb-user":"carto","sql":"  SELECT table_name  FROM information_schema.tables  WHERE table_schema = 'public' AND table_type = 'BASE TABLE'  ORDER BY table_name;  ","event_message":"Input query"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.977Z","request_id":"3b655c19-2396-4640-804f-85e25cc81b69","cdb-user":"carto","server_response":{"statusCode":200,"headers":{"access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","access-control-expose-headers":"Carto-Rate-Limit-Limit, Carto-Rate-Limit-Remaining, Carto-Rate-Limit-Reset, Retry-After","x-served-by-host":"0e8f77e96710","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","vary":"Authorization","cache-control":"no-cache,max-age=111,must-revalidate,public","last-modified":"Fri, 23 Oct 2020 09:18:08 GMT","content-disposition":"inline; filename=cartodb-query.json; modification-date=\"Fri, 23 Oct 2020 09:18:08 GMT\";","content-type":"application/json; charset=utf-8","x-served-by-db-host":"postgresql"}},"status":200,"event_message":"Response sent"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.977Z","request_id":"3b655c19-2396-4640-804f-85e25cc81b69","cdb-user":"carto","stats":{"authorization":1,"getConnectionParams":1,"getUserTimeoutLimits":1,"queryExplain":5,"eventedQuery":1,"beforeSink":2,"response":11,"total":11},"duration":0.011,"duration_ms":11,"event_message":"Request profiling stats"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.978Z","request_id":"3b655c19-2396-4640-804f-85e25cc81b69","cdb-user":"carto","tags":["query"],"event_message":"Request tagged"}
+
+### DOC: Request to rename dataset_ciudades_1 to dataset_ciudades
+
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.982Z","request_id":"e3073f30-b6c6-4d27-800e-608f71ce1c21","cdb-user":"carto","client_request":{"method":"GET","url":"/api/v2/sql?q=ALTER%20TABLE%20dataset_ciudades_1%20RENAME%20TO%20dataset_ciudades;&api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"accept-encoding":"gzip;q=1.0,deflate;q=0.6,identity;q=0.3","accept":"*/*","user-agent":"Ruby","host":"carto.localhost.lan:8080"},"remoteAddress":"172.18.0.1","remotePort":40858},"event_message":"Incoming request"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:08.984Z","request_id":"e3073f30-b6c6-4d27-800e-608f71ce1c21","cdb-user":"carto","sql":"ALTER TABLE dataset_ciudades_1 RENAME TO dataset_ciudades;","event_message":"Input query"}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40296,"fd":19},"msg":"client:disconnected","time":"2020-10-23T09:18:08.989Z","v":0}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40308,"fd":19},"msg":"client:connected","time":"2020-10-23T09:18:09.060Z","v":0}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40308,"fd":19},"command":["DBSCH","cartodb_dev_user_1c233e0a-8198-412e-8e6a-b97d6ca37372_db","carto","ALTER TABLE"],"stats":{"time":0},"results":[{"type":"ghost_tables","stats":{"time":0}}],"msg":"command:ok","time":"2020-10-23T09:18:09.061Z","v":0}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.063Z","request_id":"e3073f30-b6c6-4d27-800e-608f71ce1c21","cdb-user":"carto","server_response":{"statusCode":200,"headers":{"access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","access-control-expose-headers":"Carto-Rate-Limit-Limit, Carto-Rate-Limit-Remaining, Carto-Rate-Limit-Reset, Retry-After","x-served-by-host":"0e8f77e96710","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","vary":"Authorization","cache-control":"no-cache,max-age=0,must-revalidate,public","last-modified":"Fri, 23 Oct 2020 09:18:08 GMT","content-disposition":"inline; filename=cartodb-query.json; modification-date=\"Fri, 23 Oct 2020 09:18:08 GMT\";","content-type":"application/json; charset=utf-8","x-served-by-db-host":"postgresql"}},"status":200,"event_message":"Response sent"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.063Z","request_id":"e3073f30-b6c6-4d27-800e-608f71ce1c21","cdb-user":"carto","stats":{"authorization":1,"getConnectionParams":1,"queryExplain":1,"eventedQuery":5,"gotRows":72,"response":81,"total":80},"duration":0.081,"duration_ms":81,"event_message":"Request profiling stats"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.063Z","request_id":"e3073f30-b6c6-4d27-800e-608f71ce1c21","cdb-user":"carto","tags":["query"],"event_message":"Request tagged"}
+
+### DOC: Request to list tables
+
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.068Z","request_id":"58039ff4-7ef8-4df1-b3b1-83a9e9660f1b","cdb-user":"carto","client_request":{"method":"GET","url":"/api/v2/sql?q=%20%20SELECT%20table_name%20%20FROM%20information_schema.tables%20%20WHERE%20table_schema%20=%20%27public%27%20AND%20table_type%20=%20%27BASE%20TABLE%27%20%20ORDER%20BY%20table_name;%20%20&api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"accept-encoding":"gzip;q=1.0,deflate;q=0.6,identity;q=0.3","accept":"*/*","user-agent":"Ruby","host":"carto.localhost.lan:8080"},"remoteAddress":"172.18.0.1","remotePort":40866},"event_message":"Incoming request"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.070Z","request_id":"58039ff4-7ef8-4df1-b3b1-83a9e9660f1b","cdb-user":"carto","sql":"  SELECT table_name  FROM information_schema.tables  WHERE table_schema = 'public' AND table_type = 'BASE TABLE'  ORDER BY table_name;  ","event_message":"Input query"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.079Z","request_id":"58039ff4-7ef8-4df1-b3b1-83a9e9660f1b","cdb-user":"carto","server_response":{"statusCode":200,"headers":{"access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","access-control-expose-headers":"Carto-Rate-Limit-Limit, Carto-Rate-Limit-Remaining, Carto-Rate-Limit-Reset, Retry-After","x-served-by-host":"0e8f77e96710","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","vary":"Authorization","cache-control":"no-cache,max-age=110,must-revalidate,public","last-modified":"Fri, 23 Oct 2020 09:18:09 GMT","content-disposition":"inline; filename=cartodb-query.json; modification-date=\"Fri, 23 Oct 2020 09:18:09 GMT\";","content-type":"application/json; charset=utf-8","x-served-by-db-host":"postgresql"}},"status":200,"event_message":"Response sent"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.079Z","request_id":"58039ff4-7ef8-4df1-b3b1-83a9e9660f1b","cdb-user":"carto","stats":{"getConnectionParams":1,"getUserTimeoutLimits":1,"queryExplain":6,"beforeSink":2,"response":11,"total":10},"duration":0.011,"duration_ms":11,"event_message":"Request profiling stats"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.079Z","request_id":"58039ff4-7ef8-4df1-b3b1-83a9e9660f1b","cdb-user":"carto","tags":["query"],"event_message":"Request tagged"}
+
+### DOC: Request to drop table dataset_ciudades_tmp
+
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.083Z","request_id":"0bfc7fa9-8d98-400a-bc9d-43db5f29956d","cdb-user":"carto","client_request":{"method":"GET","url":"/api/v2/sql?q=DROP%20TABLE%20dataset_ciudades_tmp;&api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"accept-encoding":"gzip;q=1.0,deflate;q=0.6,identity;q=0.3","accept":"*/*","user-agent":"Ruby","host":"carto.localhost.lan:8080"},"remoteAddress":"172.18.0.1","remotePort":40870},"event_message":"Incoming request"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.087Z","request_id":"0bfc7fa9-8d98-400a-bc9d-43db5f29956d","cdb-user":"carto","sql":"DROP TABLE dataset_ciudades_tmp;","event_message":"Input query"}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40308,"fd":19},"msg":"client:disconnected","time":"2020-10-23T09:18:09.093Z","v":0}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40320,"fd":19},"msg":"client:connected","time":"2020-10-23T09:18:09.164Z","v":0}
+tis_1             | {"name":"tis","hostname":"4d4502878ec9","pid":1,"level":30,"client":{"address":"172.18.0.5","port":40320,"fd":19},"command":["DBSCH","cartodb_dev_user_1c233e0a-8198-412e-8e6a-b97d6ca37372_db","carto","DROP TABLE"],"stats":{"time":0},"results":[{"type":"ghost_tables","stats":{"time":0}}],"msg":"command:ok","time":"2020-10-23T09:18:09.165Z","v":0}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.169Z","request_id":"0bfc7fa9-8d98-400a-bc9d-43db5f29956d","cdb-user":"carto","server_response":{"statusCode":200,"headers":{"access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","access-control-expose-headers":"Carto-Rate-Limit-Limit, Carto-Rate-Limit-Remaining, Carto-Rate-Limit-Reset, Retry-After","x-served-by-host":"0e8f77e96710","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","vary":"Authorization","cache-control":"no-cache,max-age=0,must-revalidate,public","last-modified":"Fri, 23 Oct 2020 09:18:09 GMT","content-disposition":"inline; filename=cartodb-query.json; modification-date=\"Fri, 23 Oct 2020 09:18:09 GMT\";","content-type":"application/json; charset=utf-8","x-served-by-db-host":"postgresql"}},"status":200,"event_message":"Response sent"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.170Z","request_id":"0bfc7fa9-8d98-400a-bc9d-43db5f29956d","cdb-user":"carto","stats":{"authorization":1,"getConnectionParams":3,"queryExplain":1,"eventedQuery":5,"gotRows":76,"response":87,"total":86},"duration":0.087,"duration_ms":87,"event_message":"Request profiling stats"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.170Z","request_id":"0bfc7fa9-8d98-400a-bc9d-43db5f29956d","cdb-user":"carto","tags":["query"],"event_message":"Request tagged"}
+
+### DOC: Request to list tables
+
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.174Z","request_id":"30f0ac89-1327-4baf-8d06-f0c1b4bf829b","cdb-user":"carto","client_request":{"method":"GET","url":"/api/v2/sql?q=%20%20SELECT%20table_name%20%20FROM%20information_schema.tables%20%20WHERE%20table_schema%20=%20%27public%27%20AND%20table_type%20=%20%27BASE%20TABLE%27%20%20ORDER%20BY%20table_name;%20%20&api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"accept-encoding":"gzip;q=1.0,deflate;q=0.6,identity;q=0.3","accept":"*/*","user-agent":"Ruby","host":"carto.localhost.lan:8080"},"remoteAddress":"172.18.0.1","remotePort":40878},"event_message":"Incoming request"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.176Z","request_id":"30f0ac89-1327-4baf-8d06-f0c1b4bf829b","cdb-user":"carto","sql":"  SELECT table_name  FROM information_schema.tables  WHERE table_schema = 'public' AND table_type = 'BASE TABLE'  ORDER BY table_name;  ","event_message":"Input query"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.185Z","request_id":"30f0ac89-1327-4baf-8d06-f0c1b4bf829b","cdb-user":"carto","server_response":{"statusCode":200,"headers":{"access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","access-control-expose-headers":"Carto-Rate-Limit-Limit, Carto-Rate-Limit-Remaining, Carto-Rate-Limit-Reset, Retry-After","x-served-by-host":"0e8f77e96710","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","vary":"Authorization","cache-control":"no-cache,max-age=110,must-revalidate,public","last-modified":"Fri, 23 Oct 2020 09:18:09 GMT","content-disposition":"inline; filename=cartodb-query.json; modification-date=\"Fri, 23 Oct 2020 09:18:09 GMT\";","content-type":"application/json; charset=utf-8","x-served-by-db-host":"postgresql"}},"status":200,"event_message":"Response sent"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.185Z","request_id":"30f0ac89-1327-4baf-8d06-f0c1b4bf829b","cdb-user":"carto","stats":{"getConnectionParams":2,"queryExplain":6,"beforeSink":2,"response":11,"total":10},"duration":0.011,"duration_ms":11,"event_message":"Request profiling stats"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:09.185Z","request_id":"30f0ac89-1327-4baf-8d06-f0c1b4bf829b","cdb-user":"carto","tags":["query"],"event_message":"Request tagged"}
+
+### DOC: Run ghost tables job
+
+builder-resque_1  | ** [09:18:11 2020-10-23] 8: Found job on user_dbs
+builder-resque_1  | ** [09:18:11 2020-10-23] 8: got: (Job{user_dbs} | Resque::UserDBJobs::UserDBMaintenance::LinkGhostTablesByUsername | ["carto"])
+builder-resque_1  | ** [09:18:11 2020-10-23] 8: resque-1.25.2: Processing user_dbs since 1603444691 [Resque::UserDBJobs::UserDBMaintenance::LinkGhostTablesByUsername]
+builder-resque_1  | ** [09:18:11 2020-10-23] 8: Running before_fork hooks with [(Job{user_dbs} | Resque::UserDBJobs::UserDBMaintenance::LinkGhostTablesByUsername | ["carto"])]
+builder-resque_1  | ** [09:18:11 2020-10-23] 8: resque-1.25.2: Forked 63 at 1603444691
+builder-resque_1  | ** [09:18:11 2020-10-23] 63: Running after_fork hooks with [(Job{user_dbs} | Resque::UserDBJobs::UserDBMaintenance::LinkGhostTablesByUsername | ["carto"])]
+builder-resque_1  | D, [2020-10-23T09:18:11.588098 #63] DEBUG -- :   Carto::User Load (1.2ms)  SELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT 1  [["username", "carto"]]
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager",
+builder-resque_1  |   "step": "1",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Initialized"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#link_ghost_tables",
+builder-resque_1  |   "step": "2",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Start method"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Start method"
+builder-resque_1  | }
+builder-resque_1  | D, [2020-10-23T09:18:11.783121 #63] DEBUG -- :   Carto::ApiKey Load (0.4ms)  SELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."user_id" = $1  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:11.801396 #63] DEBUG -- :   Carto::ApiKey Load (0.5ms)  SELECT "api_keys".* FROM "api_keys" WHERE "api_keys"."user_id" = $1  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:11.825414 #63] DEBUG -- :   Carto::UserTable Load (0.5ms)  SELECT "user_tables"."name", "user_tables"."table_id" FROM "user_tables" WHERE "user_tables"."user_id" = $1  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "cartodbfied_tables": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 41027,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "user_tables": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 40986,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     },
+builder-resque_1  |     {
+builder-resque_1  |       "id": 41027,
+builder-resque_1  |       "name": "dataset_ciudades_1"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Step 1"
+builder-resque_1  | }
+builder-resque_1  | D, [2020-10-23T09:18:11.850929 #63] DEBUG -- :   Carto::UserTable Load (0.2ms)  SELECT "user_tables".* FROM "user_tables" WHERE "user_tables"."user_id" = $1  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "new_cartodbfied_ids": [
+builder-resque_1  |
+builder-resque_1  |   ],
+builder-resque_1  |   "renamed_tables": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 41027,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "missing_user_tables_ids": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 40986,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "user_tables": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": "b2791239-a999-4e2e-b64c-7a9b798a5071",
+builder-resque_1  |       "name": "dataset_ciudades",
+builder-resque_1  |       "table_id": 40986
+builder-resque_1  |     },
+builder-resque_1  |     {
+builder-resque_1  |       "id": "e4df3d9c-1039-438a-b75c-686eaca76534",
+builder-resque_1  |       "name": "dataset_ciudades_1",
+builder-resque_1  |       "table_id": 41027
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Step 2"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "new_cartodbfied_ids": [
+builder-resque_1  |
+builder-resque_1  |   ],
+builder-resque_1  |   "missing_user_tables_ids": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 40986,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Step 3"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "regenerated_tables": [
+builder-resque_1  |
+builder-resque_1  |   ],
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Step 4"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "new_tables": [
+builder-resque_1  |
+builder-resque_1  |   ],
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Step 4"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "dropped_tables": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 40986,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Step 5"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#fetch_altered_tables",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "End method"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "context": "GhostTablesManager#sync",
+builder-resque_1  |   "step": "3",
+builder-resque_1  |   "regenerated_tables": [
+builder-resque_1  |
+builder-resque_1  |   ],
+builder-resque_1  |   "renamed_tables": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 41027,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "new_tables": [
+builder-resque_1  |
+builder-resque_1  |   ],
+builder-resque_1  |   "dropped_tables": [
+builder-resque_1  |     {
+builder-resque_1  |       "id": 40986,
+builder-resque_1  |       "name": "dataset_ciudades"
+builder-resque_1  |     }
+builder-resque_1  |   ],
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "fetch_altered_tables"
+builder-resque_1  | }
+builder-resque_1  | unknown OID 25394: failed to recognize type of 'bbox'. It will be treated as String.
+builder-resque_1  | D, [2020-10-23T09:18:11.879902 #63] DEBUG -- :   Carto::Visualization Load (0.7ms)  SELECT "visualizations"."name" FROM "visualizations" WHERE "visualizations"."user_id" = $1  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+
+### DOC: an error happens when processing the table rename of UserTable(dataset_ciudades_1) -> UserTable(dataset_ciudades) because
+### the deletion of the old UserTable(dataset_ciudades) has not yet been processed, so the table_name is not free
+
+builder-resque_1  | {
+builder-resque_1  |   "target_user": {
+builder-resque_1  |     "username": "carto"
+builder-resque_1  |   },
+builder-resque_1  |   "table": {
+builder-resque_1  |     "id": 41027,
+builder-resque_1  |     "name": "dataset_ciudades"
+builder-resque_1  |   },
+builder-resque_1  |   "exception": {
+builder-resque_1  |     "class": "CartoDB::InvalidMember",
+builder-resque_1  |     "message": "{:name=>\"is already taken\"}",
+builder-resque_1  |     "backtrace_hint": [
+builder-resque_1  |       "/cartodb/app/models/visualization/member.rb:139:in `store'",
+builder-resque_1  |       "/cartodb/lib/carto/ghost_tables_manager.rb:334:in `rename_user_table_vis'",
+builder-resque_1  |       "/cartodb/lib/carto/ghost_tables_manager.rb:225:in `each'",
+builder-resque_1  |       "/cartodb/lib/carto/ghost_tables_manager.rb:225:in `sync'",
+builder-resque_1  |       "/cartodb/lib/carto/ghost_tables_manager.rb:106:in `block in sync_user_tables_with_db'"
+builder-resque_1  |     ]
+builder-resque_1  |   },
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:11 +0000",
+builder-resque_1  |   "levelname": "error",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Ghost tables: Error renaming Visualization"
+builder-resque_1  | }
+
+### DOC: I think most of this relates to the UserTable, Map, etc. deletion
+
+builder-resque_1  | D, [2020-10-23T09:18:11.936757 #63] DEBUG -- :   Carto::UserTable Load (0.4ms)  SELECT  "user_tables".* FROM "user_tables" WHERE "user_tables"."id" = $1 LIMIT 1  [["id", "b2791239-a999-4e2e-b64c-7a9b798a5071"]]
+builder-resque_1  | D, [2020-10-23T09:18:11.937766 #63] DEBUG -- :    (0.3ms)  BEGIN
+builder-resque_1  | D, [2020-10-23T09:18:11.951970 #63] DEBUG -- :   Carto::User Load (0.6ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:11.954050 #63] DEBUG -- :   Carto::User Load (0.7ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:11.977639 #63] DEBUG -- :   Carto::Layer Load (0.7ms)  SELECT "layers".* FROM "layers" INNER JOIN "layers_user_tables" ON "layers"."id" = "layers_user_tables"."layer_id" WHERE "layers_user_tables"."user_table_id" = $1  [["user_table_id", "b2791239-a999-4e2e-b64c-7a9b798a5071"]]
+builder-resque_1  | D, [2020-10-23T09:18:11.995738 #63] DEBUG -- :   Carto::Map Load (0.6ms)  SELECT "maps".* FROM "maps" INNER JOIN "layers_maps" ON "maps"."id" = "layers_maps"."map_id" WHERE "layers_maps"."layer_id" = $1  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.019242 #63] DEBUG -- :   Carto::Visualization Load (8.6ms)  SELECT  "visualizations".* FROM "visualizations" WHERE "visualizations"."map_id" = $1 LIMIT 1  [["map_id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.031190 #63] DEBUG -- :   Carto::User Load (0.5ms)  SELECT  users.email, users.username, users.admin, users.organization_id, users.id, users.avatar_url,users.api_key, users.database_schema, users.database_name, users.name, users.location,users.disqus_shortname, users.account_type, users.twitter_username, users.google_maps_key, users.viewer, users.quota_in_bytes, users.database_host, users.crypted_password, users.builder_enabled, users.private_tables_enabled, users.private_maps_enabled, users.org_admin, users.last_name, users.google_maps_private_key, users.website, users.description, users.available_for_hire, users.frontend_version, users.asset_host, users.no_map_logo, users.industry, users.company, users.phone, users.job_role, users.public_map_quota, users.public_dataset_quota, users.private_map_quota, users.maintenance_mode, users.company_employees, users.use_case, users.session_salt FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.033362 #63] DEBUG -- :   Carto::Visualization Load (0.4ms)  SELECT  "visualizations".* FROM "visualizations" WHERE "visualizations"."id" = $1 LIMIT 1  [["id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.035365 #63] DEBUG -- :   Carto::Map Load (0.3ms)  SELECT  "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1  [["id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.049478 #63] DEBUG -- :   Carto::Layer Load (0.6ms)  SELECT "layers".* FROM "layers" INNER JOIN "layers_maps" ON "layers"."id" = "layers_maps"."layer_id" WHERE "layers_maps"."map_id" = $1  ORDER BY "layers"."order" ASC  [["map_id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.061290 #63] DEBUG -- :   Carto::UserTable Load (0.4ms)  SELECT "user_tables".* FROM "user_tables" INNER JOIN "layers_user_tables" ON "user_tables"."id" = "layers_user_tables"."user_table_id" WHERE "layers_user_tables"."layer_id" = $1  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.063364 #63] DEBUG -- :   Carto::UserTable Load (0.5ms)  SELECT "user_tables".* FROM "user_tables" INNER JOIN "layers_user_tables" ON "user_tables"."id" = "layers_user_tables"."user_table_id" WHERE "layers_user_tables"."layer_id" = $1  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.065257 #63] DEBUG -- :   Carto::UserTable Load (0.5ms)  SELECT "user_tables".* FROM "user_tables" INNER JOIN "layers_user_tables" ON "user_tables"."id" = "layers_user_tables"."user_table_id" WHERE "layers_user_tables"."layer_id" = $1  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.073459 #63] DEBUG -- :   Carto::Widget Load (0.4ms)  SELECT "widgets".* FROM "widgets" WHERE "widgets"."layer_id" = $1  ORDER BY "widgets"."order" ASC  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.081802 #63] DEBUG -- :   Carto::Legend Load (0.4ms)  SELECT "legends".* FROM "legends" WHERE "legends"."layer_id" = $1  ORDER BY "legends"."created_at" ASC  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.083456 #63] DEBUG -- :   Carto::Widget Load (0.3ms)  SELECT "widgets".* FROM "widgets" WHERE "widgets"."layer_id" = $1  ORDER BY "widgets"."order" ASC  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.084592 #63] DEBUG -- :   Carto::Legend Load (0.4ms)  SELECT "legends".* FROM "legends" WHERE "legends"."layer_id" = $1  ORDER BY "legends"."created_at" ASC  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.085816 #63] DEBUG -- :   Carto::Widget Load (0.4ms)  SELECT "widgets".* FROM "widgets" WHERE "widgets"."layer_id" = $1  ORDER BY "widgets"."order" ASC  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.087025 #63] DEBUG -- :   Carto::Legend Load (0.3ms)  SELECT "legends".* FROM "legends" WHERE "legends"."layer_id" = $1  ORDER BY "legends"."created_at" ASC  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.093593 #63] DEBUG -- :   Carto::Overlay Load (0.4ms)  SELECT "overlays".* FROM "overlays" WHERE "overlays"."visualization_id" = $1  ORDER BY "overlays"."order" ASC  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.105667 #63] DEBUG -- :   Carto::Analysis Load (0.5ms)  SELECT "analyses".* FROM "analyses" WHERE "analyses"."visualization_id" = $1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.107306 #63] DEBUG -- :   Carto::User Load (0.5ms)  SELECT  users.email, users.username, users.admin, users.organization_id, users.id, users.avatar_url,users.api_key, users.database_schema, users.database_name, users.name, users.location,users.disqus_shortname, users.account_type, users.twitter_username, users.google_maps_key, users.viewer, users.quota_in_bytes, users.database_host, users.crypted_password, users.builder_enabled, users.private_tables_enabled, users.private_maps_enabled, users.org_admin, users.last_name, users.google_maps_private_key, users.website, users.description, users.available_for_hire, users.frontend_version, users.asset_host, users.no_map_logo, users.industry, users.company, users.phone, users.job_role, users.public_map_quota, users.public_dataset_quota, users.private_map_quota, users.maintenance_mode, users.company_employees, users.use_case, users.session_salt FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.116142 #63] DEBUG -- :   Carto::State Load (0.4ms)  SELECT  "states".* FROM "states" WHERE "states"."visualization_id" = $1 LIMIT 1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.130555 #63] DEBUG -- :   Carto::Permission Load (0.4ms)  SELECT  "permissions".* FROM "permissions" WHERE "permissions"."id" = $1 LIMIT 1  [["id", "8538f152-de49-4aa7-97b8-618e1cc74ff6"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.146447 #63] DEBUG -- :   Carto::Synchronization Load (0.4ms)  SELECT  "synchronizations".* FROM "synchronizations" WHERE "synchronizations"."visualization_id" = $1 LIMIT 1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.151872 #63] DEBUG -- :   Carto::UserTable Load (0.3ms)  SELECT  "user_tables".* FROM "user_tables" WHERE "user_tables"."map_id" = $1 LIMIT 1  [["map_id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.162101 #63] DEBUG -- :   Carto::DataImport Load (0.6ms)  SELECT  "data_imports".* FROM "data_imports" WHERE "data_imports"."id" = $1 LIMIT 1  [["id", "6b9810b2-bbe5-49d1-b3ac-d93cd8e8184f"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.188002 #63] DEBUG -- :   Carto::Log Load (0.4ms)  SELECT  "logs".* FROM "logs" WHERE "logs"."id" = $1 LIMIT 1  [["id", "54edb941-dd4e-4343-97e2-1b74a31afd3d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.198478 #63] DEBUG -- :   Carto::ExternalDataImport Load (0.4ms)  SELECT "external_data_imports".* FROM "external_data_imports" WHERE "external_data_imports"."data_import_id" = $1  [["data_import_id", "6b9810b2-bbe5-49d1-b3ac-d93cd8e8184f"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.207108 #63] DEBUG -- :   Carto::Mapcap Load (0.4ms)  SELECT  "mapcaps".* FROM "mapcaps" WHERE "mapcaps"."visualization_id" = $1  ORDER BY created_at DESC LIMIT 1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.213618 #63] DEBUG -- :   Carto::ExternalSource Load (0.4ms)  SELECT  "external_sources".* FROM "external_sources" WHERE "external_sources"."visualization_id" = $1 LIMIT 1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.230627 #63] DEBUG -- :   SQL (1.4ms)  INSERT INTO "visualization_backups" ("user_id", "visualization_id", "category", "export", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"], ["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"], ["category", "visualization"], ["export", "{\"version\":\"2.1.3\",\"visualization\":{\"id\":\"303cfc40-c6fc-406c-aa70-a7ebb204e46e\",\"name\":\"dataset_ciudades\",\"description\":null,\"version\":3,\"type\":\"table\",\"tags\":[],\"privacy\":\"link\",\"source\":null,\"license\":null,\"title\":null,\"kind\":\"geom\",\"attributions\":null,\"bbox\":\"0103000020110F0000010000000500000087C6A1CDCA0073C1CE3D48F3F51B73C187C6A1CDCA0073C1CC3D48F3F51B734187C6A1CDCA007341CC3D48F3F51B734187C6A1CDCA007341CE3D48F3F51B73C187C6A1CDCA0073C1CE3D48F3F51B73C1\",\"display_name\":null,\"map\":{\"provider\":\"leaflet\",\"bounding_box_sw\":\"[-85.0511, -179]\",\"bounding_box_ne\":\"[85.0511, 179]\",\"center\":\"[30, 0]\",\"zoom\":3,\"view_bounds_sw\":\"[-85.0511, -179]\",\"view_bounds_ne\":\"[85.0511, 179]\",\"scrollwheel\":true,\"legends\":true,\"options\":{\"dashboard_menu\":true,\"layer_selector\":false,\"legends\":true,\"scrollwheel\":true}},\"layers\":[{\"options\":{\"urlTemplate\":\"https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}.png\",\"urlTemplate2x\":\"https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}@2x.png\",\"subdomains\":\"abcd\",\"minZoom\":\"0\",\"maxZoom\":\"18\",\"name\":\"Voyager\",\"className\":\"voyager_labels\",\"attribution\":\"\\u0026copy; \\u003ca href=\\\"http://www.openstreetmap.org/copyright\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\"\\u003eOpenStreetMap\\u003c/a\\u003e contributors, \\u0026copy; \\u003ca href=\\\"https://www.maptiler.com/copyright/\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\"\\u003eMapTiler\\u003c/a\\u003e\",\"labels\":{\"urlTemplate\":\"https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}.png\",\"urlTemplate2x\":\"https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}@2x.png\"}},\"kind\":\"tiled\",\"infowindow\":null,\"tooltip\":null,\"widgets\":[],\"legends\":[]},{\"options\":{\"query\":\"\",\"opacity\":0.99,\"auto_bound\":false,\"interactivity\":\"cartodb_id\",\"debug\":false,\"visible\":true,\"tiler_domain\":\"localhost.lan\",\"tiler_port\":\"80\",\"tiler_protocol\":\"http\",\"sql_domain\":\"localhost.lan\",\"sql_port\":\"80\",\"sql_protocol\":\"http\",\"extra_params\":{\"cache_policy\":\"persist\"},\"tile_style_history\":[],\"style_version\":\"2.1.1\",\"table_name\":\"dataset_ciudades\",\"user_name\":\"carto\",\"tile_style\":\"#layer['mapnik::geometry_type'=1] {\\n  marker-width: 7;\\n  marker-fill: #EE4D5A;\\n  marker-fill-opacity: 0.9;\\n  marker-line-color: #FFFFFF;\\n  marker-line-width: 1;\\n  marker-line-opacity: 1;\\n  marker-placement: point;\\n  marker-type: ellipse;\\n  marker-allow-overlap: true;\\n}\\n#layer['mapnik::geometry_type'=2] {\\n  line-color: #4CC8A3;\\n  line-width: 1.5;\\n  line-opacity: 1;\\n}\\n#layer['mapnik::geometry_type'=3] {\\n  polygon-fill: #826DBA;\\n  polygon-opacity: 0.9;\\n  ::outline {\\n    line-color: #FFFFFF;\\n    line-width: 1;\\n    line-opacity: 0.5;\\n  }\\n}\",\"style_properties\":{\"type\":\"simple\",\"properties\":{\"fill\":{\"size\":{\"fixed\":7},\"color\":{\"fixed\":\"#EE4D5A\",\"opacity\":0.9}},\"stroke\":{\"size\":{\"fixed\":1},\"color\":{\"fixed\":\"#FFFFFF\",\"opacity\":1}},\"blending\":\"none\",\"aggregation\":{},\"labels\":{\"enabled\":false,\"attribute\":null,\"font\":\"DejaVu Sans Book\",\"fill\":{\"size\":{\"fixed\":10},\"color\":{\"fixed\":\"#FFFFFF\",\"opacity\":1}},\"halo\":{\"size\":{\"fixed\":1},\"color\":{\"fixed\":\"#6F808D\",\"opacity\":1}},\"offset\":-10,\"overlap\":true,\"placement\":\"point\"}}}},\"kind\":\"carto\",\"infowindow\":{\"template_name\":\"table/views/infowindow_light\",\"fields\":[]},\"tooltip\":{\"fields\":[]},\"widgets\":[],\"legends\":[]},{\"options\":{\"urlTemplate\":\"https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}.png\",\"urlTemplate2x\":\"https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}@2x.png\",\"subdomains\":\"abcd\",\"minZoom\":\"0\",\"maxZoom\":\"18\",\"name\":\"Voyager Labels\",\"attribution\":\"\\u0026copy; \\u003ca href=\\\"http://www.openstreetmap.org/copyright\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\"\\u003eOpenStreetMap\\u003c/a\\u003e contributors, \\u0026copy; \\u003ca href=\\\"https://www.maptiler.com/copyright/\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\"\\u003eMapTiler\\u003c/a\\u003e\",\"type\":\"Tiled\"},\"kind\":\"tiled\",\"infowindow\":null,\"tooltip\":null,\"widgets\":[],\"legends\":[]}],\"overlays\":[{\"options\":{\"display\":true,\"x\":20,\"y\":20},\"type\":\"share\",\"template\":\"\"},{\"options\":{\"display\":true,\"x\":60,\"y\":20},\"type\":\"search\",\"template\":\"\"},{\"options\":{\"display\":true,\"x\":20,\"y\":20},\"type\":\"zoom\",\"template\":\"\\u003ca href=\\\"#zoom_in\\\" class=\\\"zoom_in\\\"\\u003e+\\u003c/a\\u003e \\u003ca href=\\\"#zoom_out\\\" class=\\\"zoom_out\\\"\\u003e-\\u003c/a\\u003e\"},{\"options\":{\"display\":true,\"x\":20,\"y\":150},\"type\":\"loader\",\"template\":\"\\u003cdiv class=\\\"loader\\\" original-title=\\\"\\\"\\u003e\\u003c/div\\u003e\"},{\"options\":{\"display\":true,\"x\":10,\"y\":40},\"type\":\"logo\",\"template\":\"\"}],\"analyses\":[],\"user\":{\"username\":\"carto\"},\"state\":{\"json\":{}},\"permission\":{\"access_control_list\":[]},\"synchronization\":null,\"user_table\":{\"name\":\"dataset_ciudades\",\"privacy\":2,\"tags\":null,\"geometry_columns\":null,\"rows_counted\":0,\"rows_estimated\":0,\"indexes\":null,\"database_name\":null,\"description\":null,\"table_id\":40986,\"data_import\":{\"data_source\":\"https://www.dropbox.com/s/qexlwjnvznpiw3a/dataset_ciudades.csv?dl=1\",\"data_type\":\"url\",\"table_name\":\"dataset_ciudades\",\"state\":\"complete\",\"success\":true,\"updated_at\":\"2020-10-23T09:17:44.589Z\",\"created_at\":\"2020-10-23T09:17:37.551Z\",\"error_code\":null,\"queue_id\":null,\"tables_created_count\":1,\"table_names\":\"dataset_ciudades\",\"append\":false,\"migrate_table\":null,\"table_copy\":null,\"from_query\":null,\"id\":\"6b9810b2-bbe5-49d1-b3ac-d93cd8e8184f\",\"service_name\":\"public_url\",\"service_item_id\":\"https://www.dropbox.com/s/qexlwjnvznpiw3a/dataset_ciudades.csv?dl=1\",\"stats\":\"[{\\\"filename\\\":\\\"dataset_ciudades.csv\\\",\\\"type\\\":\\\".csv\\\",\\\"size\\\":62,\\\"file_rows\\\":null,\\\"imported_rows\\\":3,\\\"error_percent\\\":null,\\\"fallback_executed\\\":null}]\",\"type_guessing\":false,\"quoted_fields_guessing\":true,\"content_guessing\":false,\"host\":\"postgresql\",\"collision_strategy\":null,\"upload_host\":\"f5a0d1a3099e\",\"resque_ppid\":8,\"create_visualization\":false,\"visualization_id\":null,\"user_defined_limits\":\"{\\\"twitter_credits_limit\\\":0}\",\"import_extra_options\":\"{\\\"column_sanitization_version\\\":2}\",\"original_url\":\"https://www.dropbox.com/s/qexlwjnvznpiw3a/dataset_ciudades.csv?dl=1\",\"privacy\":2,\"cartodbfy_time\":0.029853338,\"http_response_code\":\"200\",\"rejected_layers\":null,\"runner_warnings\":null,\"server\":\"b95d4fcaac30\",\"log\":{\"type\":\"import\",\"entries\":\"2020-10-23 09:17:37 UTC: Running on server b95d4fcaac30 with PID: 25\\n2020-10-23 09:17:37 UTC: new_importer()\\n2020-10-23 09:17:37 UTC: Fetching datasource public_url metadata for item id https://www.dropbox.com/s/qexlwjnvznpiw3a/dataset_ciudades.csv?dl=1\\n2020-10-23 09:17:40 UTC: File will be downloaded from https://www.dropbox.com/s/qexlwjnvznpiw3a/dataset_ciudades.csv?dl=1\\n2020-10-23 09:17:40 UTC: Before importer run\\n2020-10-23 09:17:43 UTC: Starting import for /tmp/imports/dataset_ciudades.csv\\n2020-10-23 09:17:43 UTC: Unpacking /tmp/imports/dataset_ciudades.csv\\n2020-10-23 09:17:43 UTC: Filename: /tmp/imports/20201023-25-lcg1y6/dataset_ciudades.csv Size (bytes): 62\\n2020-10-23 09:17:43 UTC: Importing data from /tmp/imports/20201023-25-lcg1y6/dataset_ciudades.csv\\n2020-10-23 09:17:43 UTC: File-based import load\\n2020-10-23 09:17:43 UTC: Detected encoding ISO-8859-1\\n2020-10-23 09:17:43 UTC: Using database connection with {\\\"adapter\\\"=\\u003e\\\"postgres\\\", \\\"encoding\\\"=\\u003e\\\"unicode\\\", \\\"host\\\"=\\u003e\\\"postgresql\\\", \\\"port\\\"=\\u003e5432, \\\"direct_port\\\"=\\u003e5432, \\\"database\\\"=\\u003e\\\"cartodb_dev_user_1c233e0a-8198-412e-8e6a-b97d6ca37372_db\\\", \\\"username\\\"=\\u003e\\\"development_cartodb_user_1c233e0a-81\\n2020-10-23 09:17:43 UTC: ogr2ogr call:            [\\\"/usr/bin/ogr2ogr\\\", \\\"-f\\\", \\\"PostgreSQL\\\", \\\"PG:host=postgresql port=5432 user=development_cartodb_user_1c233e0a-8198-412e-8e6a-b97d6ca37372 dbname=cartodb_dev_user_1c233e0a-8198-412e-8e6a-b97d6ca37372_db password=2671bd0f643ca621ccb4b70af2ea5f84182f1282development_cartodb_user_1c233e0a-8198-412e-8e6a-b97d6ca37372\\\", \\\"-lco\\\", \\\"DIM=2\\\", \\\"-lco\\\", \\\"PRECISION=NO\\\", \\\"/tmp/imports/20201023-25-lcg1y6/dataset_ciudades.csv\\\", \\\"-nln\\\", \\\"cdb_importer.importer_837942ae400b419296b6d416f123c731\\\", \\\"-nlt\\\", \\\"PROMOTE_TO_MULTI\\\", \\\"-doo\\\", \\\"PRELUDE_STATEMENTS=SET statement_timeout TO '1h' \\\", \\\"-doo\\\", \\\"CLOSING_STATEMENTS=SET statement_timeout TO DEFAULT \\\", \\\"-update\\\"]\\n2020-10-23 09:17:43 UTC: ogr2ogr output:          \\n2020-10-23 09:17:43 UTC: ogr2ogr exit code:       0\\n2020-10-23 09:17:43 UTC: Georeferencing...\\n2020-10-23 09:17:43 UTC: Disabling autovacuum for \\\"cdb_importer\\\".\\\"importer_837942ae400b419296b6d416f123c731\\\"\\n2020-10-23 09:17:43 UTC: Creating the_geom column\\n2020-10-23 09:17:43 UTC: Enabling autovacuum for \\\"cdb_importer\\\".\\\"importer_837942ae400b419296b6d416f123c731\\\"\\n2020-10-23 09:17:43 UTC: Georeferenced\\n2020-10-23 09:17:43 UTC: Finished importing data from /tmp/imports/20201023-25-lcg1y6/dataset_ciudades.csv\\n2020-10-23 09:17:43 UTC: Checking public and private map quota\\n2020-10-23 09:17:43 UTC: Checking public datasets quota\\n2020-10-23 09:17:43 UTC: Proceeding to register\\n2020-10-23 09:17:43 UTC: Before renaming from importer_837942ae400b419296b6d416f123c731 to dataset_ciudades\\n2020-10-23 09:17:43 UTC: Before moving schema 'dataset_ciudades' from cdb_importer to public\\n2020-10-23 09:17:43 UTC: Before persisting metadata 'dataset_ciudades' data_import_id: 6b9810b2-bbe5-49d1-b3ac-d93cd8e8184f\\n2020-10-23 09:17:44 UTC: Table 'dataset_ciudades' registered\\n2020-10-23 09:17:44 UTC: After importer run\\n2020-10-23 09:17:44 UTC: After dispatch\\n2020-10-23 09:17:44 UTC: Import finished\\n\\n\"},\"external_data_imports\":[]}},\"uses_vizjson2\":false,\"mapcap\":null,\"external_source\":null,\"created_at\":\"2020-10-23T09:17:44.053Z\",\"updated_at\":\"2020-10-23T09:17:44.348Z\",\"locked\":false,\"encrypted_password\":null,\"password_salt\":null}}"], ["created_at", "2020-10-23 09:18:12.225089"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.235445 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "user_tables" WHERE "user_tables"."id" = $1  [["id", "b2791239-a999-4e2e-b64c-7a9b798a5071"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.236967 #63] DEBUG -- :   Carto::Map Load (0.4ms)  SELECT  "maps".* FROM "maps" WHERE "maps"."id" = $1 LIMIT 1  [["id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.238292 #63] DEBUG -- :   Carto::Visualization Load (0.4ms)  SELECT  "visualizations".* FROM "visualizations" WHERE "visualizations"."map_id" = $1 LIMIT 1  [["map_id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.239910 #63] DEBUG -- :   Carto::ExternalSource Load (0.4ms)  SELECT  "external_sources".* FROM "external_sources" WHERE "external_sources"."visualization_id" = $1 LIMIT 1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.246421 #63] DEBUG -- :   Carto::Asset Load (0.4ms)  SELECT  "assets".* FROM "assets" WHERE "assets"."visualization_id" = $1 LIMIT 1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.247719 #63] DEBUG -- :   Carto::Synchronization Load (0.4ms)  SELECT  "synchronizations".* FROM "synchronizations" WHERE "synchronizations"."visualization_id" = $1 LIMIT 1  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.252868 #63] DEBUG -- :   Carto::SharedEntity Load (0.4ms)  SELECT "shared_entities".* FROM "shared_entities" WHERE "shared_entities"."entity_id" = $1  [["entity_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.254146 #63] DEBUG -- :   Carto::Overlay Load (0.3ms)  SELECT "overlays".* FROM "overlays" WHERE "overlays"."visualization_id" = $1  ORDER BY "overlays"."order" ASC  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.256054 #63] DEBUG -- :   Carto::User Load (0.5ms)  SELECT  users.email, users.username, users.admin, users.organization_id, users.id, users.avatar_url,users.api_key, users.database_schema, users.database_name, users.name, users.location,users.disqus_shortname, users.account_type, users.twitter_username, users.google_maps_key, users.viewer, users.quota_in_bytes, users.database_host, users.crypted_password, users.builder_enabled, users.private_tables_enabled, users.private_maps_enabled, users.org_admin, users.last_name, users.google_maps_private_key, users.website, users.description, users.available_for_hire, users.frontend_version, users.asset_host, users.no_map_logo, users.industry, users.company, users.phone, users.job_role, users.public_map_quota, users.public_dataset_quota, users.private_map_quota, users.maintenance_mode, users.company_employees, users.use_case, users.session_salt FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.257587 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "overlays" WHERE "overlays"."id" = $1  [["id", "cebd1cce-f33d-404f-8850-1663223eab7f"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.258676 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "overlays" WHERE "overlays"."id" = $1  [["id", "699243d5-0d9f-4b1c-809d-6b2d62072369"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.259572 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "overlays" WHERE "overlays"."id" = $1  [["id", "8fcf60ef-8ffb-4592-8b02-2028693605a5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.260472 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "overlays" WHERE "overlays"."id" = $1  [["id", "ce69a63c-8093-47e8-ad76-45d8dbc2ac82"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.261477 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "overlays" WHERE "overlays"."id" = $1  [["id", "ed464a75-fb55-40b5-89b5-2aee7e5cd7f1"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.263120 #63] DEBUG -- :   Carto::Mapcap Load (0.3ms)  SELECT "mapcaps".* FROM "mapcaps" WHERE "mapcaps"."visualization_id" = $1  ORDER BY created_at DESC  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.269707 #63] DEBUG -- :   Carto::Snapshot Load (0.4ms)  SELECT "snapshots".* FROM "snapshots" WHERE "snapshots"."visualization_id" = $1  ORDER BY created_at DESC  [["visualization_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.271118 #63] DEBUG -- :   Carto::Visualization Load (0.4ms)  SELECT  "visualizations".* FROM "visualizations" WHERE "visualizations"."id" IS NULL LIMIT 1
+builder-resque_1  | D, [2020-10-23T09:18:12.272427 #63] DEBUG -- :   Carto::Visualization Load (0.4ms)  SELECT  "visualizations".* FROM "visualizations" WHERE "visualizations"."id" IS NULL LIMIT 1
+builder-resque_1  | D, [2020-10-23T09:18:12.277934 #63] DEBUG -- :    (0.3ms)  SELECT COUNT(*) FROM "visualizations" WHERE "visualizations"."parent_id" = $1  [["parent_id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.286Z","request_id":"28993db5-0897-4a7b-abd1-d8effc6fdd0e","cdb-user":"carto","client_request":{"method":"DELETE","url":"/api/v1/map/named/tpl_303cfc40_c6fc_406c_aa70_a7ebb204e46e?api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"host":"carto.localhost.lan","accept":"*/*","user-agent":"Mozilla/5.0 (CartoDB) Gecko/20100101 Firefox/40.0","content-type":"application/json"},"remoteAddress":"172.18.0.8","remotePort":54840},"event_message":"Incoming request"}
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.289Z","cdb-user":"carto","template_id":"tpl_303cfc40_c6fc_406c_aa70_a7ebb204e46e","duration":0,"duration_ms":0,"event_message":"Named map invalidation success"}
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.290Z","request_id":"28993db5-0897-4a7b-abd1-d8effc6fdd0e","cdb-user":"carto","server_response":{"statusCode":204,"headers":{"x-served-by-host":"36e9f01ab49f","access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","vary":"Authorization","x-request-id":"28993db5-0897-4a7b-abd1-d8effc6fdd0e","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372"}},"status":204,"event_message":"Response sent"}
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.290Z","request_id":"28993db5-0897-4a7b-abd1-d8effc6fdd0e","cdb-user":"carto","stats":{"response":4,"total":4},"duration":0.004,"duration_ms":4,"event_message":"Request profiling stats"}
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.290Z","request_id":"28993db5-0897-4a7b-abd1-d8effc6fdd0e","cdb-user":"carto","tags":["named","admin","delete"],"event_message":"Request tagged"}
+builder-resque_1  | D, [2020-10-23T09:18:12.292062 #63] DEBUG -- :   Carto::User Load (0.6ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.296095 #63] DEBUG -- :   SQL (2.4ms)  DELETE FROM "visualizations" WHERE "visualizations"."id" = $1  [["id", "303cfc40-c6fc-406c-aa70-a7ebb204e46e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.297169 #63] DEBUG -- :   Carto::Permission Load (0.3ms)  SELECT  "permissions".* FROM "permissions" WHERE "permissions"."id" = $1 LIMIT 1  [["id", "8538f152-de49-4aa7-97b8-618e1cc74ff6"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.298843 #63] DEBUG -- :   SQL (0.5ms)  DELETE FROM "permissions" WHERE "permissions"."id" = $1  [["id", "8538f152-de49-4aa7-97b8-618e1cc74ff6"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.300620 #63] DEBUG -- :   Carto::LayersMap Load (0.3ms)  SELECT "layers_maps".* FROM "layers_maps" WHERE "layers_maps"."map_id" = $1  [["map_id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.304031 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "layers_maps" WHERE "layers_maps"."id" = $1  [["id", "cded5d93-1398-4cb6-a397-d642d571e18a"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.305799 #63] DEBUG -- :   Carto::Layer Load (0.4ms)  SELECT  "layers".* FROM "layers" WHERE "layers"."id" = $1 LIMIT 1  [["id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.307631 #63] DEBUG -- :   Carto::LayersMap Load (0.3ms)  SELECT "layers_maps".* FROM "layers_maps" WHERE "layers_maps"."layer_id" = $1  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.312910 #63] DEBUG -- :   Carto::LayersUser Load (0.3ms)  SELECT "layers_users".* FROM "layers_users" WHERE "layers_users"."layer_id" = $1  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.314528 #63] DEBUG -- :   Carto::LayersUserTable Load (0.3ms)  SELECT "layers_user_tables".* FROM "layers_user_tables" WHERE "layers_user_tables"."layer_id" = $1  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.315775 #63] DEBUG -- :   Carto::Legend Load (0.4ms)  SELECT "legends".* FROM "legends" WHERE "legends"."layer_id" = $1  ORDER BY "legends"."created_at" ASC  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.317491 #63] DEBUG -- :   Carto::Map Load (0.4ms)  SELECT "maps".* FROM "maps" INNER JOIN "layers_maps" ON "maps"."id" = "layers_maps"."map_id" WHERE "layers_maps"."layer_id" = $1  [["layer_id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.319065 #63] DEBUG -- :   SQL (0.7ms)  DELETE FROM "layers" WHERE "layers"."id" = $1  [["id", "3852b01b-77f3-4235-aa5b-87bcd199bc0d"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.320032 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "layers_maps" WHERE "layers_maps"."id" = $1  [["id", "b49e41dd-97aa-4558-8a40-916833f9e88e"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.321046 #63] DEBUG -- :   Carto::Layer Load (0.3ms)  SELECT  "layers".* FROM "layers" WHERE "layers"."id" = $1 LIMIT 1  [["id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.322294 #63] DEBUG -- :   Carto::LayersMap Load (0.3ms)  SELECT "layers_maps".* FROM "layers_maps" WHERE "layers_maps"."layer_id" = $1  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.323218 #63] DEBUG -- :   Carto::LayersUser Load (0.3ms)  SELECT "layers_users".* FROM "layers_users" WHERE "layers_users"."layer_id" = $1  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.324108 #63] DEBUG -- :   Carto::LayersUserTable Load (0.3ms)  SELECT "layers_user_tables".* FROM "layers_user_tables" WHERE "layers_user_tables"."layer_id" = $1  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.327338 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "layers_user_tables" WHERE "layers_user_tables"."id" = $1  [["id", "8d1d9fee-8fbb-4e5c-bb19-960e6ba3ca84"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.328764 #63] DEBUG -- :   Carto::Legend Load (0.4ms)  SELECT "legends".* FROM "legends" WHERE "legends"."layer_id" = $1  ORDER BY "legends"."created_at" ASC  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.330576 #63] DEBUG -- :   Carto::Map Load (0.5ms)  SELECT "maps".* FROM "maps" INNER JOIN "layers_maps" ON "maps"."id" = "layers_maps"."map_id" WHERE "layers_maps"."layer_id" = $1  [["layer_id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.331647 #63] DEBUG -- :   SQL (0.4ms)  DELETE FROM "layers" WHERE "layers"."id" = $1  [["id", "5f4d1a02-c6db-462b-8093-c0279c0205d4"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.332600 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "layers_maps" WHERE "layers_maps"."id" = $1  [["id", "ea0b29e2-32a1-424d-93a8-e23a22056267"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.333731 #63] DEBUG -- :   Carto::Layer Load (0.4ms)  SELECT  "layers".* FROM "layers" WHERE "layers"."id" = $1 LIMIT 1  [["id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.334850 #63] DEBUG -- :   Carto::LayersMap Load (0.3ms)  SELECT "layers_maps".* FROM "layers_maps" WHERE "layers_maps"."layer_id" = $1  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.335911 #63] DEBUG -- :   Carto::LayersUser Load (0.4ms)  SELECT "layers_users".* FROM "layers_users" WHERE "layers_users"."layer_id" = $1  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.336927 #63] DEBUG -- :   Carto::LayersUserTable Load (0.4ms)  SELECT "layers_user_tables".* FROM "layers_user_tables" WHERE "layers_user_tables"."layer_id" = $1  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.338106 #63] DEBUG -- :   Carto::Legend Load (0.3ms)  SELECT "legends".* FROM "legends" WHERE "legends"."layer_id" = $1  ORDER BY "legends"."created_at" ASC  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.339835 #63] DEBUG -- :   Carto::Map Load (0.5ms)  SELECT "maps".* FROM "maps" INNER JOIN "layers_maps" ON "maps"."id" = "layers_maps"."map_id" WHERE "layers_maps"."layer_id" = $1  [["layer_id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.341019 #63] DEBUG -- :   SQL (0.5ms)  DELETE FROM "layers" WHERE "layers"."id" = $1  [["id", "38de387a-0bf5-46ce-b8db-b6df01be1a38"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.342490 #63] DEBUG -- :   Carto::User Load (0.6ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.346160 #63] DEBUG -- :   Carto::Tag Load (0.4ms)  SELECT "tags".* FROM "tags" WHERE "tags"."user_id" = $1 AND "tags"."table_id" = $2  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"], ["table_id", "b2791239-a999-4e2e-b64c-7a9b798a5071"]]
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000277s) SET standard_conforming_strings = ON",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000374s) SET client_min_messages = 'WARNING'",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000325s) SET DateStyle = 'ISO'",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000555s)  SET search_path TO \"public\", cartodb, cdb_dataservices_client, public ",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.001265s) SELECT \"pg_class\".\"oid\" FROM \"pg_class\" INNER JOIN \"pg_namespace\" ON (\"pg_namespace\".\"oid\" = \"pg_class\".\"relnamespace\") WHERE ((\"relkind\" = 'r') AND (\"nspname\" = 'public') AND (\"relname\" = 'dataset_ciudades')) LIMIT 1",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "PG::NullValueNotAllowed: ERROR:  query string argument of EXECUTE is null\nCONTEXT:  PL/pgSQL function cartodb._cdb_tablemetadata_updated() line 43 at EXECUTE\nSQL statement \"WITH upsert AS (\n            UPDATE cartodb.cdb_tablemetadata\n            SET updated_at = NOW()\n            WHERE tabname = tablename\n            RETURNING *\n        )\n        INSERT INTO cartodb.cdb_tablemetadata (tabname, updated_at)\n            SELECT tablename, NOW()\n            WHERE NOT EXISTS (SELECT * FROM upsert)\"\nPL/pgSQL function cdb_tablemetadatatouch(regclass) line 3 at SQL statement:  SELECT CDB_TableMetadataTouch(40986::oid::regclass) ",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "error",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000601s) SELECT \"pg_class\".\"oid\" FROM \"pg_class\" INNER JOIN \"pg_namespace\" ON (\"pg_namespace\".\"oid\" = \"pg_class\".\"relnamespace\") WHERE ((\"relkind\" = 'r') AND (\"nspname\" = 'public') AND (\"relname\" = 'dataset_ciudades')) LIMIT 1",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "exception": {
+builder-resque_1  |     "class": "Sequel::DatabaseError",
+builder-resque_1  |     "message": "PG::NullValueNotAllowed: ERROR:  query string argument of EXECUTE is null\nCONTEXT:  PL/pgSQL function cartodb._cdb_tablemetadata_updated() line 43 at EXECUTE\nSQL statement \"WITH upsert AS (\n            UPDATE cartodb.cdb_tablemetadata\n            SET updated_at = NOW()\n            WHERE tabname = tablename\n            RETURNING *\n        )\n        INSERT INTO cartodb.cdb_tablemetadata (tabname, updated_at)\n            SELECT tablename, NOW()\n            WHERE NOT EXISTS (SELECT * FROM upsert)\"\nPL/pgSQL function cdb_tablemetadatatouch(regclass) line 3 at SQL statement\n",
+builder-resque_1  |     "backtrace_hint": [
+builder-resque_1  |       "/var/lib/gems/2.5.0/gems/sequel-4.45.0/lib/sequel/adapters/postgres.rb:191:in `async_exec'",
+builder-resque_1  |       "/var/lib/gems/2.5.0/gems/sequel-4.45.0/lib/sequel/adapters/postgres.rb:191:in `block in execute_query'",
+builder-resque_1  |       "/var/lib/gems/2.5.0/gems/sequel-rails-1.0.1/lib/sequel_rails/sequel/database/active_support_notification.rb:17:in `block in log_connection_yield'",
+builder-resque_1  |       "/var/lib/gems/2.5.0/gems/activesupport-4.2.11.3/lib/active_support/notifications.rb:164:in `block in instrument'",
+builder-resque_1  |       "/var/lib/gems/2.5.0/gems/activesupport-4.2.11.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'"
+builder-resque_1  |     ]
+builder-resque_1  |   },
+builder-resque_1  |   "table": {
+builder-resque_1  |     "id": 40986,
+builder-resque_1  |     "name": "dataset_ciudades",
+builder-resque_1  |     "oid": 41027
+builder-resque_1  |   },
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "error",
+builder-resque_1  |   "cdb-user": "carto",
+builder-resque_1  |   "event_message": "update_cdb_tablemetadata failed"
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000269s) BEGIN",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000523s) SET LOCAL lock_timeout = '1s'",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000669s) SELECT cartodb._CDB_Table_Exists('public.dataset_ciudades')",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.002277s) SELECT cartodb.CDB_DropOverviews('public.dataset_ciudades')",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.002269s) DROP TABLE IF EXISTS public.dataset_ciudades",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | INFO:  _CDB_LinkGhostTables() called with username=<NULL>, event_name=DROP TABLE
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.021278s) COMMIT",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | D, [2020-10-23T09:18:12.396608 #63] DEBUG -- :   Carto::Template Load (0.4ms)  SELECT "templates".* FROM "templates"
+builder-resque_1  | D, [2020-10-23T09:18:12.398863 #63] DEBUG -- :   SQL (0.3ms)  DELETE FROM "maps" WHERE "maps"."id" = $1  [["id", "78e35d2d-c2f4-4cdc-8f1d-d505dce4bdd5"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.400638 #63] DEBUG -- :   Carto::User Load (0.6ms)  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"]]
+builder-resque_1  | D, [2020-10-23T09:18:12.402576 #63] DEBUG -- :   Carto::Tag Load (0.4ms)  SELECT "tags".* FROM "tags" WHERE "tags"."user_id" = $1 AND "tags"."table_id" = $2  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"], ["table_id", "b2791239-a999-4e2e-b64c-7a9b798a5071"]]
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000581s) SELECT \"pg_class\".\"oid\" FROM \"pg_class\" INNER JOIN \"pg_namespace\" ON (\"pg_namespace\".\"oid\" = \"pg_class\".\"relnamespace\") WHERE ((\"relkind\" = 'r') AND (\"nspname\" = 'public') AND (\"relname\" = 'dataset_ciudades')) LIMIT 1",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000308s) BEGIN",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000453s) SET LOCAL lock_timeout = '1s'",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000809s) SELECT cartodb._CDB_Table_Exists('public.dataset_ciudades')",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000464s) DROP TABLE IF EXISTS public.dataset_ciudades",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | INFO:  _CDB_LinkGhostTables() called with username=<NULL>, event_name=DROP TABLE
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.001265s) COMMIT",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | D, [2020-10-23T09:18:12.409984 #63] DEBUG -- :   Carto::Template Load (0.5ms)  SELECT "templates".* FROM "templates"
+builder-resque_1  | D, [2020-10-23T09:18:12.411326 #63] DEBUG -- :   Carto::Tag Load (0.3ms)  SELECT "tags".* FROM "tags" WHERE "tags"."user_id" = $1 AND "tags"."table_id" = $2  [["user_id", "1c233e0a-8198-412e-8e6a-b97d6ca37372"], ["table_id", "b2791239-a999-4e2e-b64c-7a9b798a5071"]]
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000746s) SELECT \"pg_class\".\"oid\" FROM \"pg_class\" INNER JOIN \"pg_namespace\" ON (\"pg_namespace\".\"oid\" = \"pg_class\".\"relnamespace\") WHERE ((\"relkind\" = 'r') AND (\"nspname\" = 'public') AND (\"relname\" = 'dataset_ciudades')) LIMIT 1",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000457s) BEGIN",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000426s) SET LOCAL lock_timeout = '1s'",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000590s) SELECT cartodb._CDB_Table_Exists('public.dataset_ciudades')",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.000437s) DROP TABLE IF EXISTS public.dataset_ciudades",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | INFO:  _CDB_LinkGhostTables() called with username=<NULL>, event_name=DROP TABLE
+builder-resque_1  | {
+builder-resque_1  |   "event_message": "(0.001353s) COMMIT",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null
+builder-resque_1  | }
+builder-resque_1  | D, [2020-10-23T09:18:12.418594 #63] DEBUG -- :   Carto::Template Load (0.3ms)  SELECT "templates".* FROM "templates"
+builder-resque_1  | D, [2020-10-23T09:18:12.420065 #63] DEBUG -- :    (1.1ms)  COMMIT
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.429Z","request_id":"f257703c-336f-4f03-9d11-a7378b2e1a5d","cdb-user":"carto","client_request":{"method":"DELETE","url":"/api/v1/map/named/tpl_303cfc40_c6fc_406c_aa70_a7ebb204e46e?api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"host":"carto.localhost.lan","accept":"*/*","user-agent":"Mozilla/5.0 (CartoDB) Gecko/20100101 Firefox/40.0","content-type":"application/json"},"remoteAddress":"172.18.0.8","remotePort":54840},"event_message":"Incoming request"}
+windshaft_1       | {"levelname":"error","timestamp":"2020-10-23T09:18:12.430Z","request_id":"f257703c-336f-4f03-9d11-a7378b2e1a5d","cdb-user":"carto","exception":{"type":"Error","message":"Template 'tpl_303cfc40_c6fc_406c_aa70_a7ebb204e46e' of user 'carto' does not exist","stack":"Error: Template 'tpl_303cfc40_c6fc_406c_aa70_a7ebb204e46e' of user 'carto' does not exist\n    at /node_windshaft/lib/backends/template-maps.js:271:29\n    at /node_windshaft/lib/backends/template-maps.js:73:55\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)"},"event_message":"Error while handling the request"}
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.431Z","request_id":"f257703c-336f-4f03-9d11-a7378b2e1a5d","cdb-user":"carto","server_response":{"statusCode":404,"headers":{"x-served-by-host":"36e9f01ab49f","access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","vary":"Authorization","x-request-id":"f257703c-336f-4f03-9d11-a7378b2e1a5d","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","content-type":"application/json; charset=utf-8","content-length":"235"}},"status":404,"event_message":"Response sent"}
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.431Z","request_id":"f257703c-336f-4f03-9d11-a7378b2e1a5d","cdb-user":"carto","stats":{"response":2,"total":2},"duration":0.002,"duration_ms":2,"event_message":"Request profiling stats"}
+windshaft_1       | {"levelname":"info","timestamp":"2020-10-23T09:18:12.431Z","request_id":"f257703c-336f-4f03-9d11-a7378b2e1a5d","cdb-user":"carto","tags":["named","admin","delete"],"event_message":"Request tagged"}
+
+### DOC: Ghost Tables job completed
+
+builder-resque_1  | {
+builder-resque_1  |   "job_class": "Resque::UserDBJobs::UserDBMaintenance::LinkGhostTablesByUsername",
+builder-resque_1  |   "args": "\"carto\"",
+builder-resque_1  |   "timestamp": "2020-10-23 09:18:12 +0000",
+builder-resque_1  |   "levelname": "info",
+builder-resque_1  |   "cdb-user": null,
+builder-resque_1  |   "event_message": "Job performed"
+builder-resque_1  | }
+builder-resque_1  | ** [09:18:12 2020-10-23] 63: done: (Job{user_dbs} | Resque::UserDBJobs::UserDBMaintenance::LinkGhostTablesByUsername | ["carto"])
+
+### DOC: Request to list tables
+
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:19.200Z","request_id":"9c071071-bcc8-4f57-8132-fa30ee1e238d","cdb-user":"carto","client_request":{"method":"GET","url":"/api/v2/sql?q=%20%20SELECT%20table_name%20%20FROM%20information_schema.tables%20%20WHERE%20table_schema%20=%20%27public%27%20AND%20table_type%20=%20%27BASE%20TABLE%27%20%20ORDER%20BY%20table_name;%20%20&api_key=938c409ee3bd91bbdad43d58ba30878fd37345cc","headers":{"accept-encoding":"gzip;q=1.0,deflate;q=0.6,identity;q=0.3","accept":"*/*","user-agent":"Ruby","host":"carto.localhost.lan:8080"},"remoteAddress":"172.18.0.1","remotePort":40898},"event_message":"Incoming request"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:19.207Z","request_id":"9c071071-bcc8-4f57-8132-fa30ee1e238d","cdb-user":"carto","sql":"  SELECT table_name  FROM information_schema.tables  WHERE table_schema = 'public' AND table_type = 'BASE TABLE'  ORDER BY table_name;  ","event_message":"Input query"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:19.215Z","request_id":"9c071071-bcc8-4f57-8132-fa30ee1e238d","cdb-user":"carto","server_response":{"statusCode":200,"headers":{"access-control-allow-origin":"*","access-control-allow-headers":"X-Requested-With, X-Prototype-Version, X-CSRF-Token, Authorization, Carto-Event, Carto-Event-Source, Carto-Event-Group-Id","access-control-expose-headers":"Carto-Rate-Limit-Limit, Carto-Rate-Limit-Remaining, Carto-Rate-Limit-Reset, Retry-After","x-served-by-host":"0e8f77e96710","carto-user":"carto","carto-user-id":"1c233e0a-8198-412e-8e6a-b97d6ca37372","vary":"Authorization","cache-control":"no-cache,max-age=100,must-revalidate,public","last-modified":"Fri, 23 Oct 2020 09:18:19 GMT","content-disposition":"inline; filename=cartodb-query.json; modification-date=\"Fri, 23 Oct 2020 09:18:19 GMT\";","content-type":"application/json; charset=utf-8","x-served-by-db-host":"postgresql"}},"status":200,"event_message":"Response sent"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:19.215Z","request_id":"9c071071-bcc8-4f57-8132-fa30ee1e238d","cdb-user":"carto","stats":{"authorization":1,"getConnectionParams":5,"getUserTimeoutLimits":1,"queryExplain":6,"beforeSink":1,"gotRows":1,"response":15,"total":15},"duration":0.015,"duration_ms":15,"event_message":"Request profiling stats"}
+sql-api_1         | {"levelname":"info","timestamp":"2020-10-23T09:18:19.215Z","request_id":"9c071071-bcc8-4f57-8132-fa30ee1e238d","cdb-user":"carto","tags":["query"],"event_message":"Request tagged"}
